@@ -55,9 +55,14 @@ Here's what happens when an attacker tries to brute force the honeypot:
 - Uses KQL queries to investigate scope
 
 
-## Building This Lab Step by Step
+## Building This Lab 
 
 This section walks through how I built this SOC automation lab from scratch. Configuration files and queries are available in the `/config` folders.
+
+Before proceeding to demonstrate how this lab can be built step-by-step, if you just want to test it out without the hassle, you may use IaC tools to rapidly deploy it. I have made available the json files of my entire resource group in the `/IaC Fast Build` folder, which you can deploy using ARM (Azure's IaC solution) and manually add in some detection rules. I have not tested out deployment via these templates myself.
+
+Otherwise, the following demonstrates how to build it from scratch:
+
 
 ### Phase 1: Setting Up Azure Infrastructure
 

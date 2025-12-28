@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "connections_gmail_name": {
+            "value": null
+        },
+        "connections_outlook_name": {
+            "value": null
+        },
+        "connections_acsemail_name": {
+            "value": null
+        },
+        "connections_openaiip_name": {
+            "value": null
+        },
+        "connections_openaiip_1_name": {
+            "value": null
+        },
+        "connections_azuresentinel_name": {
+            "value": null
+        },
+        "virtualMachines_Soc_Vm_name": {
+            "value": null
+        },
+        "virtualNetworks_Vnet_Soc_name": {
+            "value": null
+        },
+        "dataCollectionRules_DCR_1_name": {
+            "value": null
+        },
+        "publicIPAddresses_Soc_Vm_ip_name": {
+            "value": null
+        },
+        "workflows_sentinel_email_alerts_name": {
+            "value": null
+        },
+        "networkInterfaces_soc_vm958_z1_name": {
+            "value": null
+        },
+        "workspaces_Log_Soc_name": {
+            "value": null
+        },
+        "networkSecurityGroups_Soc_Vm_nsg_name": {
+            "value": null
+        }
+    }
+}
