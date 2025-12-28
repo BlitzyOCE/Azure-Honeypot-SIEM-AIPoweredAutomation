@@ -1,0 +1,31 @@
+{
+  "type": "ApiConnection",
+  "inputs": {
+    "host": {
+      "connection": {
+        "referenceName": "openaiip"
+      }
+    },
+    "method": "post",
+    "body": {
+      "model": "gpt-4o",
+      "messages": [
+        {
+          "role": "user",
+          "content": "You are a cybersecurity analyst for a Security Operations Center. Analyze this Microsoft Sentinel incident and provide a concise assessment.\n\nINCIDENT DETAILS:\nTitle: @{triggerBody()?['object']?['properties']?['title']}\nSeverity: @{triggerBody()?['object']?['properties']?['severity']}\nDescription: @{triggerBody()?['object']?['properties']?['description']} \nTime Detected: @{triggerBody()?['object']?['properties']?['createdTimeUtc']}\nStatus: @{triggerBody()?['object']?['properties']?['status']}\n\nProvide your analysis in this format:\n\nTHREAT ASSESSMENT:\n[Brief assessment of the threat level and attack type]\n\nIMMEDIATE ACTIONS (it doesn't have to be 3):\n1. [First action]\n2. [Second action]\n3. [Third action]\n\nMITRE ATT&CK MAPPING:\n[Relevant tactics/techniques if applicable]\n\nRISK SCORE: [X/10]\n\nKeep response under 400 words."
+        }
+      ],
+      "n": 1,
+      "temperature": 1,
+      "max_tokens": 500,
+      "frequency_penalty": 0,
+      "presence_penalty": 0
+    },
+    "path": "/v1/chat/completions"
+  },
+  "runAfter": {
+    "Send_an_email_(V2)": [
+      "Succeeded"
+    ]
+  }
+}

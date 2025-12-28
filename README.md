@@ -133,7 +133,7 @@ I connected my honeypot VM to Sentinel using the "Windows Security Events via AM
 
 **Waiting for Attacks**
 
-After 24-48 hours, internet scanners discovered my exposed RDP port. I started seeing Event ID 4625 (Failed Logon) events—the primary indicator of brute force attacks.
+After 24-48 hours, internet scanners discovered my exposed RDP port. I started seeing Event ID 4625 (Failed Logon) events alongside with other events.
 
 Using a simple KQL query to check for EventID 4625, I confirmed that attackers were actively trying common usernames like "administrator", "root", "server", "admin".
 
